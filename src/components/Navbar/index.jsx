@@ -1,13 +1,17 @@
 import React from 'react'
-import { Nav, ListNav, OptionsNav } from './styles'
+import { Nav, ListNav, NavLi, NavLink, LogoContainer } from './styles'
 
 const NavBar = ({ options }) => {
+  console.log('hola')
   return (
     <Nav>
+      <LogoContainer>
+        <NavLink>{'<--'}AnderDev{'!-->'}</NavLink>
+      </LogoContainer>
       <ListNav>
         {
         options.map((option, index) => (
-          <a key={index} href={option.replaceAll(' ', '')}><OptionsNav>{option}</OptionsNav></a>
+          <NavLink key={index} href={option.replaceAll(' ', '')}><NavLi>{option}</NavLi></NavLink>
         ))
         }
       </ListNav>
