@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: center;
   ${withTheme('font-size', 'fonts.size')}
-  background-color: #202124;
+  ${withTheme('background-color', 'colors.darkBlue')}
   ${withTheme('font-family', 'fonts.body')}
 
 `
@@ -20,13 +20,13 @@ export const ListNav = styled.ul`
 export const NavLi = styled.li`
   margin: 5px auto;
   padding: 0px 45px;
-  ${withTheme('color', 'fonts.colorBase')}
+  ${withTheme('color', 'colors.witheColor')}
 
 
 `
 
 export const NavLink = styled.a`
-  ${withTheme('color', 'fonts.colorBase')}
+  ${withTheme('color', 'colors.witheColor')}
   list-style-type: none;
   text-decoration: none;
  
