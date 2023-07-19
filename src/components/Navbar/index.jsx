@@ -1,9 +1,8 @@
 import React from 'react'
-import ToggleSwitch from '../ToggleSwitch'
 import { Nav, ListNav, NavLi, NavLink, LogoContainer } from './styles'
+import ToggleSwitch from '../ToggleSwitch'
 
 const NavBar = ({ options }) => {
-  console.log('hola')
   return (
     <Nav>
       <LogoContainer>
@@ -17,11 +16,8 @@ const NavBar = ({ options }) => {
           </NavLink>
         ))
         }
-        <NavLink>
-          <NavLi>
-            <ToggleSwitch />
-          </NavLi>
-        </NavLink>
+        <ToggleSwitch />
+
       </ListNav>
 
     </Nav>
