@@ -1,6 +1,7 @@
 import styled from '@emotion/styled/macro'
 
-export const ContainerSwitch = styled.div``
+export const ContainerSwitch = styled.div`
+`
 
 export const Label = styled.label`
   background-color: #ffff;

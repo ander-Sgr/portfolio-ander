@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import sunIcon from './icons/sunIcon.svg'
 import moonIcon from './icons/moonIcon.svg'
 import {
@@ -16,9 +16,20 @@ const ToggleSwitch = () => {
   const { changeTheme } = useContext(ThemeContext)
 
   const handleOnchangeCheckBox = () => {
-    setIsChecked(!isChecked)
+    setIsChecked((prevIsChecked) => {
+      localStorage.setItem('toggleChecked', JSON.stringify(!prevIsChecked))
+      return !prevIsChecked
+    })
     changeTheme()
   }
+
+  useEffect(() => {
+    const storedState = localStorage.getItem('toggleChecked')
+    if (storedState) {
+      setIsChecked(JSON.parse(storedState))
+    }
+  }, [])
+
   return (
     <ContainerSwitch>
       <CheckBox
