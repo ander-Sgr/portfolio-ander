@@ -21,6 +21,16 @@ export const theme = {
     laptop: '1024px',
     laptopL: '1440px',
     desktop: '2560px'
+  },
+
+  ligth: {
+    foreground: '#000000',
+    background: '#eeeeee'
+  },
+
+  dark: {
+    foreground: '#FFFFFF',
+    background: '#222222'
   }
 
 }
