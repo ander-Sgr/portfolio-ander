@@ -12,9 +12,11 @@ const App = () => {
   }
   return (
     <ThemeProvider theme={currentTheme}>
-      <NavBar options={optionsMenu} />
-      <Container>holaaa</Container>
-      <button onClick={handleButtonClick}>Cambiar Tema</button>
+      <Container>
+        <NavBar options={optionsMenu} />
+        holaaa
+        <button onClick={handleButtonClick}>Cambiar Tema</button>
+      </Container>
     </ThemeProvider>
   )
 }
