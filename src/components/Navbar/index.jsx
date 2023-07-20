@@ -1,6 +1,7 @@
 import React from 'react'
 import { Nav, ListNav, NavLi, NavLink, LogoContainer } from './styles'
 import ToggleSwitch from '../ToggleSwitch'
+import HamburgerIcon from '../HamburgerIcon'
 
 const NavBar = ({ options }) => {
   return (
@@ -16,8 +17,12 @@ const NavBar = ({ options }) => {
           </NavLink>
         ))
         }
-        <ToggleSwitch />
-
+        <NavLi>
+          <ToggleSwitch />
+        </NavLi>
+        <NavLi>
+          <HamburgerIcon />
+        </NavLi>
       </ListNav>
 
     </Nav>

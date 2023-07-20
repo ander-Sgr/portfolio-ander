@@ -10,6 +10,11 @@ export const Nav = styled.nav`
   ${withTheme('font-family', 'fonts.body')}
 
   background-color: ${props => props.theme.background};
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+
 `
 
 export const ListNav = styled.ul`
@@ -19,22 +24,24 @@ export const ListNav = styled.ul`
 `
 
 export const NavLi = styled.li`
-  margin: 5px auto;
-  padding: 0px 45px;
-  ${withTheme('color', 'colors.witheColor')}subtreeflags: 0,
+  margin: 0.313rem auto;
+  padding: 0rem 2.813rem;
+  ${withTheme('color', 'colors.witheColor')}
+ 
 
 
 `
 
 export const NavLink = styled.a`
-color: ${props => props.theme.foreground};
-
+  color: ${props => props.theme.foreground};
   list-style-type: none;
   text-decoration: none;
- 
-
 `
 export const LogoContainer = styled.div`
-   margin-right: 550px;
-   
+   margin-right: 34.375rem;
+`
+
+export const HamburgerIcon = styled.img`
+  width: 25px;
+  
 `
