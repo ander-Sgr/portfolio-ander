@@ -6,16 +6,12 @@ import { ThemeProvider } from '@emotion/react'
 
 const App = () => {
   const optionsMenu = ['Sobre Mi', 'Proyectos', 'CV']
-  const { currentTheme, changeTheme } = useContext(ThemeContext)
-  const handleButtonClick = () => {
-    changeTheme() // Cambiar el tema al hacer clic en el botón
-  }
+  const { currentTheme } = useContext(ThemeContext)
+
   return (
     <ThemeProvider theme={currentTheme}>
       <Container>
         <NavBar options={optionsMenu} />
-        holaaa
-        <button onClick={handleButtonClick}>Cambiar Tema</button>
       </Container>
     </ThemeProvider>
   )
