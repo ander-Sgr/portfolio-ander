@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Nav, ListNav, NavLi, NavLink, LogoContainer } from './styles'
 import ToggleSwitch from '../ToggleSwitch'
 import HamburgerIcon from '../HamburgerIcon'
 
 const NavBar = ({ options }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const handleOnClickMenuOpen = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <Nav>
       <LogoContainer>
-        <NavLink>{'<--'}AnderDev{'!-->'}</NavLink>
+        <NavLink>
+          {'<--'}AnderDev{'!-->'}
+        </NavLink>
       </LogoContainer>
       <ListNav>
         {
@@ -20,10 +28,8 @@ const NavBar = ({ options }) => {
         <NavLi>
           <ToggleSwitch />
         </NavLi>
-        <NavLi>
-          <HamburgerIcon />
-        </NavLi>
       </ListNav>
+      <HamburgerIcon isMenuOpen={isMenuOpen} setIsMenuOpen={handleOnClickMenuOpen} />
 
     </Nav>
   )
