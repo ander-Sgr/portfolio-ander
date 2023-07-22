@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root{
   --clr-background: #fafafa;
   --clr-foreground: #202124;
   --ff-primary-body: Arial, Helvetica, sans-serif;
   --ff-smartpointCloud-font: atls-default, sans-serif;
   --ff-primary-headline: 'Impact', sans-serif;
+  --ff-logo-font: 'Press Start 2P', cursive;
 }
 
 

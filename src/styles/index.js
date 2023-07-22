@@ -2,7 +2,8 @@ export const theme = {
   fonts: {
     body: 'var(--ff-primary-body)',
     heading: 'var(--ff-primary-headline)',
-    size: '18px'
+    size: '18px',
+    logoFont: 'var(--ff-logo-font)'
   },
   fontWeight: {
     bold: 'bold'
@@ -30,7 +31,8 @@ export const theme = {
 
   dark: {
     foreground: '#FFFFFF',
-    background: '#222222'
+    background: '#222222',
+    backgroundBody: '#25262A'
   }
 
 }
