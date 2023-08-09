@@ -14,8 +14,10 @@ const hamburgerToXAnimation = keyframes`
 `
 
 export const HamburgerIconSvg = styled.svg`
-  width: 25px;
-  display: none; /* Hide the hamburger icon on large screens */
+  width: 40px;
+  position: relative;
+  right: 15px;
+  display: none;
   transition: transform 0.3s ease;
   transform-origin: center;
 
@@ -23,9 +25,9 @@ export const HamburgerIconSvg = styled.svg`
     animation: ${hamburgerToXAnimation} 0.3s forwards;
   `}
 
-  @media (max-width: 750px) {
-    display: block; /* Show the hamburger icon on small screens */
+  @media (max-width: 910px) {
+    display: block;
     cursor: pointer;
-    padding-right: 0.5rem;
+
   }
 `

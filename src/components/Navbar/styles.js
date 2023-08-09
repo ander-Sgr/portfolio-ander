@@ -1,54 +1,78 @@
 import styled from '@emotion/styled'
-import { withTheme } from '../../helpers/style.helper'
 
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
-  justify-content: center;
-  ${withTheme('font-size', 'fonts.size')}
-  ${withTheme('font-family', 'fonts.body')}
-  background: ${props => props.theme.background};
+  justify-content: space-between;
+  font-size: ${(props) => props.theme.fonts.size};
+  font-family: ${(props) => props.theme.fonts.body};
+  background: ${(props) => props.theme.background};
+  height: 5.255rem;
 `
 
 export const ListNav = styled.ul`
   list-style-type: none;
-  display: flex;
+  flex-direction: column;
+  background: ${(props) => props.theme.background};
+  padding: 1rem;
+  display: ${(props) => (props.isMenuOpen ? 'flex' : 'none')};
+
+  @media (min-width: 910px) {
+    padding: 0;
+    display: flex; 
+  }
 
 `
 
 export const NavLi = styled.li`
-  margin: 0 1.4rem; /* Add space between list items */
-  color: ${props => props.theme.foreground};
-
-  @media (max-width: 750px) {
-    display: none; /* Hide the list items on small screens */
-  }
+  margin: 0 1.4rem;
+  
+  color: ${(props) => props.theme.foreground};
 `
 
 export const NavLink = styled.a`
-  color: ${props => props.theme.foreground};
+  color: ${(props) => props.theme.foreground};
   list-style-type: none;
   text-decoration: none;
-  padding: 0.5rem 1rem; /* Add some padding to make links more clickable */
 
-  @media (max-width: 750px) {
-    display: block; /* Show the links as block elements on small screens */
-    width: 100%; /* Make the links full-width on small screens */
-    text-align: center; /* Center the links on small screens */
-    margin: 0.5rem 0; /* Add space between links on small screens */
+  @media (max-width: 910px) {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: center;
+    margin: 0.5rem 0;
   }
 `
 
 export const LogoContainer = styled.div`
-  margin-right: 0.5rem; /* Ajusta el margen derecho */
-  ${withTheme('font-family', 'fonts.logoFont')}
+  font-family: ${(props) => props.theme.fonts.logoFont};
+`
 
-  @media (min-width: 750px)  and (min-width: 1440px) {
-    margin-right: 44rem;  /* Establece un margen vertical en pantallas más pequeñas */
-    
+export const Logo = styled.a`
+  color: ${(props) => props.theme.foreground};
+  text-decoration: none;
+  margin-left: 8rem;
+
+  @media (max-width: 910px) {
+    margin-left: 1.25rem;
+
   }
-  @media (max-width: 750px) {
-    padding-right: 5rem;
-    font-size: 11px;    
+`
+
+export const Options = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 8rem;
+
+  
+  @media (max-width: 910px) {
+    flex-direction: column;
+    position: fixed;
+    margin-right: 0rem;
+    background: ${(props) => props.theme.background};
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    width: 55%;
   }
 `
