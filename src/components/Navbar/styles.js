@@ -74,5 +74,6 @@ export const Options = styled.div`
     right: 0;
     bottom: 0;
     width: 55%;
+    z-index: 1;
   }
 `
