@@ -14,8 +14,10 @@ const App = () => {
       <Container>
         <NavBar options={optionsMenu} />
         <AboutMe />
+
       </Container>
     </ThemeProvider>
+
   )
 }
 
