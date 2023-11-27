@@ -1,17 +1,6 @@
 import styled from '@emotion/styled'
 import { keyframes, css } from '@emotion/react'
 
-export const WavesFrame = styled.svg`
-  position: fixed;
-  left: 50%;
-  width: 100%;
-  transform: translateX(-50%);
-  height: 100%;
-
-  @media (max-width: 768px) {
-    width: 80%;
-  }
-`
 const fadeRotate = keyframes`
   from {
     opacity: 0;
@@ -28,6 +17,29 @@ const rotate = keyframes`
   to {
     transform: rotate(180deg);
   }
+`
+
+export const SvgContainer = styled.div`
+  width: 100% ;
+`
+
+export const WavesFrame = styled.svg`
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 40%;
+  transform: translateX(-50%);
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+`
+
+export const Text = styled.h1`
+position: absolute;
+left: 33.4%;
+font-size: 140px;
+top: 27%;
 `
 
 export const VectorLine = styled.path`
