@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import NavBar from '../Navbar'
 import { ThemeContext } from '../../contexts/ThemeContext'
-import { Container } from './styles'
 import { ThemeProvider } from '@emotion/react'
 import AboutMe from '../../pages/aboutMe'
 
@@ -11,11 +10,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <Container>
-        <NavBar options={optionsMenu} />
-        <AboutMe />
-
-      </Container>
+      <NavBar options={optionsMenu} />
     </ThemeProvider>
 
   )
