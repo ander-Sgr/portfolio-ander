@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   font-size: ${(props) => props.theme.fonts.size};
   font-family: ${(props) => props.theme.fonts.body};
-  background: ${(props) => props.theme.background};
+  background-color: ${(props) => props.theme.backgroundNavBar};
   height: 5.255rem;
 `
 
@@ -43,9 +43,9 @@ export const NavLink = styled.a`
     margin: 0.5rem 0;
   }
 `
-
+/* import font Lexend */
 export const LogoContainer = styled.div`
-  font-family: ${(props) => props.theme.fonts.logoFont};
+  font-family: ${(props) => props.theme.fonts.lexendFont};
 `
 
 export const Logo = styled.a`

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Nav, ListNav, NavLi, NavLink, LogoContainer, Logo, Options } from './styles'
 import ToggleSwitch from '../ToggleSwitch'
 import HamburgerIcon from '../HamburgerIcon'
-import LogoIcon from './subComponents/LogoIcon'
 
 const NavBar = ({ options }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,11 +17,7 @@ const NavBar = ({ options }) => {
   return (
     <Nav>
       <LogoContainer>
-        <Logo href='/'>
-          <LogoIcon />
-          AnderSgr
-          <LogoIcon />
-        </Logo>
+        <Logo to='/'>&#60;Ander&#47;&#62;</Logo>
       </LogoContainer>
       <ListNav isMenuOpen={isMenuOpen}>
 
