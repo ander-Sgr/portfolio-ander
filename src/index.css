@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
 
 :root{
   --clr-background: #fafafa;
@@ -6,7 +7,8 @@
   --ff-primary-body: Arial, Helvetica, sans-serif;
   --ff-smartpointCloud-font: atls-default, sans-serif;
   --ff-primary-headline: 'Impact', sans-serif;
-  --ff-logo-font: 'Press Start 2P', cursive;
+  --ff-press-start-font: 'Press Start 2P', cursive;
+  --ff-lexend-bold-500-font: 'Lexend', sans-serif;
 }
 
 

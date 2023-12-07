@@ -1,27 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { ThemeContext } from '../contexts/ThemeContext'
 import { theme } from '../styles'
 
 export const DarkThemeProvider = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState(theme.dark)
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme')
-    if (storedTheme) {
-      setCurrentTheme(JSON.parse(storedTheme))
-    }
-  }, [])
+  const [currentTheme, setCurrentTheme] = useState(theme.dark.colors)
 
   const changeTheme = () => {
     // setCurrentTheme(currentTheme === theme.dark ? theme.ligth : theme.dark)
     setCurrentTheme((prevTheme) =>
-      prevTheme === theme.dark ? theme.ligth : theme.dark
+      prevTheme === theme.dark.colors ? theme.light.colors : theme.dark.colors
     )
   }
-  // TO DO save the theme in the locaLStorage..
-  useEffect(() => {
-    localStorage.setItem('theme', JSON.stringify(currentTheme))
-  }, [currentTheme])
 
   return (
     <ThemeContext.Provider value={{ currentTheme, changeTheme }}>

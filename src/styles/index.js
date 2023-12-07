@@ -3,17 +3,12 @@ export const theme = {
     body: 'var(--ff-primary-body)',
     heading: 'var(--ff-primary-headline)',
     size: '18px',
-    logoFont: 'var(--ff-logo-font)'
+    logoFont: 'var(--ff-logo-font)',
+    lexendFont: 'var(--ff-lexend-bold-500-font)'
   },
   fontWeight: {
     bold: 'bold'
   },
-
-  colors: {
-    darkBlue: 'var(--clr-foreground)',
-    witheColor: 'var(--clr-background)'
-  },
-
   sizes: {
     mobileS: '320px',
     mobileM: '375px',
@@ -24,15 +19,18 @@ export const theme = {
     desktop: '2560px'
   },
 
-  ligth: {
-    foreground: '#000000',
-    background: '#eeeeee'
+  light: {
+    colors: {
+      foreground: '#000000',
+      backgroundNavBar: '#eeeeee',
+      backgroundBody: '#FFFFFF'
+    }
   },
-
   dark: {
-    foreground: '#FFFFFF',
-    background: '#222222',
-    backgroundBody: '#25262A'
+    colors: {
+      foreground: '#FFFFFF',
+      backgroundNavBar: '#151515',
+      backgroundBody: '#0B0F17'
+    }
   }
-
 }
