@@ -4,7 +4,8 @@ export const theme = {
     heading: 'var(--ff-primary-headline)',
     size: '18px',
     logoFont: 'var(--ff-logo-font)',
-    lexendFont: 'var(--ff-lexend-bold-500-font)'
+    lexendFont: 'var(--ff-lexend-bold-500-font)',
+    manropeFont: 'var(--ff-manrope-medium)'
   },
   fontWeight: {
     bold: 'bold'
