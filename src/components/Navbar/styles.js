@@ -52,18 +52,27 @@ export const Logo = styled.a`
   color: ${(props) => props.theme.foreground};
   text-decoration: none;
   margin-left: 8rem;
-
+  font-size: 32px;
   @media (max-width: 910px) {
     margin-left: 1.25rem;
 
   }
 `
 
+export const StyledCharacter = styled.span`
+  color: #FF2626;
+`
+export const LogoText = styled.span``
+
+export const StyledClosingBracket = styled.span`
+  color: #FF2626;
+`
+
 export const Options = styled.div`
   display: flex;
   align-items: center;
   margin-right: 8rem;
-
+  font-family: ${(props) => props.theme.fonts.manropeFont};
   
   @media (max-width: 910px) {
     flex-direction: column;

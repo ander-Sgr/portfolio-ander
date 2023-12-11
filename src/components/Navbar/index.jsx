@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Nav, ListNav, NavLi, NavLink, LogoContainer, Logo, Options } from './styles'
+import { Nav, ListNav, NavLi, NavLink, LogoContainer, Logo, Options, StyledCharacter, LogoText, StyledClosingBracket } from './styles'
 import ToggleSwitch from '../ToggleSwitch'
 import HamburgerIcon from '../HamburgerIcon'
 
@@ -17,7 +17,12 @@ const NavBar = ({ options }) => {
   return (
     <Nav>
       <LogoContainer>
-        <Logo to='/'>&#60;Ander&#47;&#62;</Logo>
+        <Logo to='/'>
+          <StyledCharacter>&#60;</StyledCharacter>
+          <LogoText>Ander</LogoText>
+          <StyledCharacter>&#47;</StyledCharacter>
+          <StyledClosingBracket>&#62;</StyledClosingBracket>
+        </Logo>
       </LogoContainer>
       <ListNav isMenuOpen={isMenuOpen}>
 
