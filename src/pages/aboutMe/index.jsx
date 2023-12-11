@@ -1,12 +1,14 @@
 import React from 'react'
-import Waves from './waves'
-import { Container } from './styles'
+import { ContainerIntro, IntroText, LineSeparator, SubTitle } from './styles'
 
 const AboutMe = () => {
   return (
-    <Container>
-      <Waves />
-    </Container>
+    <ContainerIntro>
+      <IntroText>Hey, I'm <br /> Anderson
+        <SubTitle>Web Developer</SubTitle>
+      </IntroText>
+      <LineSeparator />
+    </ContainerIntro>
   )
 }
 
