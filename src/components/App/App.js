@@ -11,6 +11,7 @@ const App = () => {
   return (
     <ThemeProvider theme={currentTheme}>
       <NavBar options={optionsMenu} />
+      <AboutMe />
     </ThemeProvider>
 
   )
