@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 
 :root{
   --clr-background: #fafafa;
@@ -9,6 +10,7 @@
   --ff-primary-headline: 'Impact', sans-serif;
   --ff-press-start-font: 'Press Start 2P', cursive;
   --ff-lexend-bold-500-font: 'Lexend', sans-serif;
+  --ff-manrope-medium: 'Manrope', sans-serif;
 }
 
 
