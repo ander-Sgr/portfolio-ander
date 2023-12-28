@@ -1,32 +1,61 @@
 import React from 'react'
 import {
   CardContainer,
-  CardImageContainer,
-  ImgCard,
-  CardContent,
+  ContentWrapper,
   Headline,
   SubHeadline,
   ProjectDescription,
-  CardButtonsContainer,
+  ImageContainer,
+  Image,
   ButtonProject,
   ButtonSourceCode
 } from './styles'
+import jsIcon from './svgs/js.svg'
+import minesweeperImg from './images/minesweeper.png'
 
-const CardProject = ({ img, title, stack, descrip, urlProject, urlCode }) => {
+const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, urlCode }) => {
+  const renderImage = (nameImage) => {
+    const images = {
+      minesweeper: minesweeperImg,
+      js: jsIcon
+    }
+    if (Array.isArray(nameImage)) {
+      const icons = nameImage.map((tech, index) => {
+        let icon = null
+
+        if (images[tech]) {
+          icon = images[tech]
+        }
+        return { icon, index }
+      })
+      return icons.map(({ key, icon, index }) => (
+        icon == null ? <React.Fragment key={index} /> : <img key={index} src={icon} alt={`Tech Icon ${index}`} />
+      ))
+    } else {
+      let imgCard = null
+      if (images[imgProject]) {
+        imgCard = images[imgProject]
+      }
+      return imgCard
+    }
+  }
+
   return (
     <CardContainer>
-      <CardImageContainer>
-        <ImgCard src='' alt='Imagen del proyecto' />
-      </CardImageContainer>
-      <CardContent>
-        <Headline>Encabezado</Headline>
-        <SubHeadline>Subencabezado</SubHeadline>
-        <ProjectDescription>Descripción breve del proyecto.</ProjectDescription>
-      </CardContent>
-      <CardButtonsContainer>
-        <ButtonProject href='enlace_al_proyecto'>Ver Proyecto</ButtonProject>
-        <ButtonSourceCode href='enlace_al_codigo'>Código Fuente</ButtonSourceCode>
-      </CardButtonsContainer>
+      <ContentWrapper>
+        <ImageContainer>
+          <Image src={renderImage(imgProject)} />
+        </ImageContainer>
+        <Headline>{title}</Headline>
+        <SubHeadline>
+          {renderImage(iconTech)}
+        </SubHeadline>
+        <ProjectDescription>{descrip}</ProjectDescription>
+      </ContentWrapper>
+      <div>
+        <ButtonProject href={urlProject}>Ver Proyecto</ButtonProject>
+        <ButtonSourceCode href={urlCode}>Código Fuente</ButtonSourceCode>
+      </div>
     </CardContainer>
   )
 }
