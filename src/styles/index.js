@@ -31,7 +31,7 @@ export const theme = {
     colors: {
       foreground: '#FFFFFF',
       backgroundNavBar: '#151515',
-      backgroundBody: '#0B0F17'
+      backgroundBody: '#030307'
     }
   }
 }

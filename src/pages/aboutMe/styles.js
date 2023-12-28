@@ -16,6 +16,6 @@ export const SubTitle = styled(IntroText)`
 `
 export const LineSeparator = styled.div`
     width: 641px;
-    padding: 2px;
+    padding: 1px;
     background-color: #FFFFFF;
 `
