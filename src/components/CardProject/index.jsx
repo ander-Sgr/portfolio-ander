@@ -42,12 +42,13 @@ const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, ur
 
   return (
     <CardContainer>
+      <ImageContainer>
+        <Image src={renderImage(imgProject)} />
+      </ImageContainer>
       <ContentWrapper>
-        <ImageContainer>
-          <Image src={renderImage(imgProject)} />
-        </ImageContainer>
         <Headline>{title}</Headline>
         <SubHeadline>
+          Tech Stack
           {renderImage(iconTech)}
         </SubHeadline>
         <ProjectDescription>{descrip}</ProjectDescription>

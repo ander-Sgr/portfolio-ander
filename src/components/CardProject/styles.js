@@ -8,16 +8,14 @@ const colors = {
   darkred: ''
 }
 
-// Estilos para tu tarjeta utilizando Emotion
 export const CardContainer = styled.div`
   background-color: ${colors.darkGray};
   color: ${colors.white};
   border-radius: 8px;
-  padding: 20px;
+  width: 395px;
+  padding: 0px 0px 20px 0px;
   margin: 20px;
-  width: 350px;
   display: flex;
-
   @media (min-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -26,30 +24,36 @@ export const CardContainer = styled.div`
 
 export const ContentWrapper = styled.div`
   display: grid;
+  margin: 0px 25px 0px 25px;
+ 
 `
 
 export const ImageContainer = styled.div`
-  margin-bottom: 20px;
+  background-color: #1B1B1B;
+  display: flex;
+  justify-content: center;
+
+  padding: 20px 0px 40px 0px;
   @media (min-width: 768px) {
-    margin-bottom: 0;
-    margin-right: 20px;
-    max-width: 200px;
+
   }
 `
 
 export const Image = styled.img`
-  width: 100%;
-  border-radius: 8px;
+  width: 70%;
+  border-radius: 3px;
 `
 
 export const Headline = styled.h2`
   color: ${colors.red};
   margin-bottom: 10px;
+  font-size: 30px;
 `
 
 export const SubHeadline = styled.h3`
   color: ${colors.lightGray};
   margin-bottom: 10px;
+  width: 25px;
 `
 
 export const ProjectDescription = styled.p`
@@ -61,7 +65,6 @@ color: ${colors.white};
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 4px;
-  display: inline-block;
   margin-right: 10px;
   cursor: pointer;
   &:hover {
