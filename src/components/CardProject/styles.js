@@ -8,13 +8,13 @@ const colors = {
   darkred: ''
 }
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.section`
   background-color: ${colors.darkGray};
   color: ${colors.white};
   border-radius: 8px;
   width: 395px;
   padding: 0px 0px 20px 0px;
-  margin: 20px;
+  margin: 20px 20px 20px 20px;
   display: flex;
   @media (min-width: 768px) {
     flex-direction: column;
@@ -33,14 +33,12 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
 
-  padding: 20px 0px 40px 0px;
-  @media (min-width: 768px) {
-
-  }
+  padding: 14px 0px 14px 0px;
+ 
 `
 
 export const Image = styled.img`
-  width: 70%;
+  width: 50%;
   border-radius: 3px;
 `
 
@@ -51,17 +49,31 @@ export const Headline = styled.h2`
 `
 
 export const SubHeadline = styled.h3`
-  color: ${colors.lightGray};
+  color: ${colors.white};
   margin-bottom: 10px;
-  width: 25px;
 `
 
 export const ProjectDescription = styled.p`
-  margin-bottom: 20px;
+overflow: auto; /* Agregar scroll cuando el texto es largo */
+  max-height: 180px; /* Altura máxima para el párrafo */
+  margin-bottom: 10px; /* Espacio en la parte inferior */
+`
+
+export const ImageTech = styled.img`
+  width: 28px;  
+  padding-right: 15px;
+ 
+`
+export const ContainerButtons = styled.div`
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(2, 147px);
+  margin-top: 80px;
 `
 
 const ButtonStyle = styled.a`
-color: ${colors.white};
+  text-align: center;
+  color: ${colors.white};
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 4px;
@@ -73,11 +85,13 @@ color: ${colors.white};
 `
 
 export const ButtonProject = styled(ButtonStyle)`
+  grid-column: 1 / 2;
   background-color: ${colors.red};
 
 `
 
 export const ButtonSourceCode = styled(ButtonStyle)`
+  grid-column: 2 / 2;
   background-color: #323232;
 
 `

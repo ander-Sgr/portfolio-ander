@@ -8,16 +8,25 @@ import {
   ImageContainer,
   Image,
   ButtonProject,
-  ButtonSourceCode
+  ButtonSourceCode,
+  ImageTech,
+  ContainerButtons
 } from './styles'
 import jsIcon from './svgs/js.svg'
 import minesweeperImg from './images/minesweeper.png'
+import htmlIcon from './svgs/html.svg'
+import cssIcon from './svgs/css.svg'
+import playwrightIcon from './svgs/playwright.svg'
 
 const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, urlCode }) => {
   const renderImage = (nameImage) => {
     const images = {
       minesweeper: minesweeperImg,
-      js: jsIcon
+      js: jsIcon,
+      html: htmlIcon,
+      css: cssIcon,
+      playwright: playwrightIcon
+
     }
     if (Array.isArray(nameImage)) {
       const icons = nameImage.map((tech, index) => {
@@ -29,7 +38,7 @@ const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, ur
         return { icon, index }
       })
       return icons.map(({ key, icon, index }) => (
-        icon == null ? <React.Fragment key={index} /> : <img key={index} src={icon} alt={`Tech Icon ${index}`} />
+        icon == null ? <React.Fragment key={index} /> : <ImageTech key={index} src={icon} alt={`Tech Icon ${index}`} />
       ))
     } else {
       let imgCard = null
@@ -48,15 +57,14 @@ const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, ur
       <ContentWrapper>
         <Headline>{title}</Headline>
         <SubHeadline>
-          Tech Stack
           {renderImage(iconTech)}
         </SubHeadline>
         <ProjectDescription>{descrip}</ProjectDescription>
       </ContentWrapper>
-      <div>
-        <ButtonProject href={urlProject}>Ver Proyecto</ButtonProject>
-        <ButtonSourceCode href={urlCode}>Código Fuente</ButtonSourceCode>
-      </div>
+      <ContainerButtons>
+        <ButtonProject href={urlProject} target='_blank'>Ver Proyecto</ButtonProject>
+        <ButtonSourceCode href={urlCode} target='_blank'>Código Fuente</ButtonSourceCode>
+      </ContainerButtons>
     </CardContainer>
   )
 }
