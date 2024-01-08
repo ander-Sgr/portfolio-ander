@@ -4,7 +4,7 @@ import { ContainerIntro, IntroText, LineSeparator, SubTitle } from './styles'
 const AboutMe = () => {
   return (
     <ContainerIntro>
-      <IntroText>Hey, I'm <br /> Anderson
+      <IntroText>Hey, Soy <br /> Anderson
         <SubTitle>Web Developer</SubTitle>
       </IntroText>
       <LineSeparator />
