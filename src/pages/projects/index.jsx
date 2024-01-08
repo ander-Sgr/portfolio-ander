@@ -1,13 +1,15 @@
 import React from 'react'
 import CardProject from '../../components/CardProject'
-import { Container } from './styles'
+import { Container, HeadLine } from './styles'
 
 const Projects = () => {
   const stackMinesweeper = ['js', 'html', 'css', 'playwright']
-  const stackPostApp = ['']
+  const stackPostApp = ['laravel', 'html', 'css']
 
   return (
+
     <Container>
+      <HeadLine>PROYECTOS</HeadLine>
       <CardProject
         imgProject='minesweeper'
         title='MINESWEEPER'
@@ -22,13 +24,12 @@ const Projects = () => {
         imgProject='postApp'
         title='POST-APP'
         iconTech={stackPostApp}
-        descrip='Con la creación de esta aplicación'
+        descrip='Esta aplicación fue realizada con fines prácticos, se hizo uso del base de datos realacional
+        así como la creación de factorias, migraciciones y poblacion de la base de datos con datos mock. Todo esto hecho con
+        Laravel, HTML, CSS y como base de datos HeidiSQL'
+        urlCode='https://github.com/ander-Sgr/posts-app'
       />
-      <CardProject
-        imgProject='minesweeper'
-        title='LOL-TRACKER-GG'
 
-      />
     </Container>
   )
 }
