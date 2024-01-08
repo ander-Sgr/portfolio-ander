@@ -24,39 +24,41 @@ export const CardContainer = styled.section`
 
 export const ContentWrapper = styled.div`
   display: grid;
-  margin: 0px 25px 0px 25px;
- 
+  grid-template-rows: repeat(3, 92px);
+  margin: 0px 15px 0px 15px;
 `
 
 export const ImageContainer = styled.div`
   background-color: #1B1B1B;
   display: flex;
   justify-content: center;
-
   padding: 14px 0px 14px 0px;
+height: 200px;
  
 `
 
 export const Image = styled.img`
-  width: 50%;
-  border-radius: 3px;
+  max-width: 70%;
+  border-radius: 8px;
 `
 
-export const Headline = styled.h2`
+export const Headline = styled.h1`
   color: ${colors.red};
-  margin-bottom: 10px;
   font-size: 30px;
 `
 
-export const SubHeadline = styled.h3`
+export const SubHeadlineContainer = styled.div`
   color: ${colors.white};
-  margin-bottom: 10px;
+  padding-bottom: 15px;
+`
+export const SubHeadline = styled.h2`
+
 `
 
+export const IconsContainer = styled.div``
+
 export const ProjectDescription = styled.p`
-overflow: auto; /* Agregar scroll cuando el texto es largo */
-  max-height: 180px; /* Altura máxima para el párrafo */
-  margin-bottom: 10px; /* Espacio en la parte inferior */
+
 `
 
 export const ImageTech = styled.img`
@@ -68,7 +70,8 @@ export const ContainerButtons = styled.div`
   display: grid;
   gap: 50px;
   grid-template-columns: repeat(2, 147px);
-  margin-top: 80px;
+  margin-top: 90px;
+
 `
 
 const ButtonStyle = styled.a`
@@ -77,7 +80,6 @@ const ButtonStyle = styled.a`
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 4px;
-  margin-right: 10px;
   cursor: pointer;
   &:hover {
     opacity: 0.8;
@@ -85,13 +87,10 @@ const ButtonStyle = styled.a`
 `
 
 export const ButtonProject = styled(ButtonStyle)`
-  grid-column: 1 / 2;
   background-color: ${colors.red};
 
 `
 
 export const ButtonSourceCode = styled(ButtonStyle)`
-  grid-column: 2 / 2;
   background-color: #323232;
-
 `

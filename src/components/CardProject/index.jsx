@@ -3,7 +3,9 @@ import {
   CardContainer,
   ContentWrapper,
   Headline,
+  SubHeadlineContainer,
   SubHeadline,
+  IconsContainer,
   ProjectDescription,
   ImageContainer,
   Image,
@@ -14,6 +16,7 @@ import {
 } from './styles'
 import jsIcon from './svgs/js.svg'
 import minesweeperImg from './images/minesweeper.png'
+import postAppImg from './images/post-app.png'
 import htmlIcon from './svgs/html.svg'
 import cssIcon from './svgs/css.svg'
 import playwrightIcon from './svgs/playwright.svg'
@@ -22,6 +25,7 @@ const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, ur
   const renderImage = (nameImage) => {
     const images = {
       minesweeper: minesweeperImg,
+      postApp: postAppImg,
       js: jsIcon,
       html: htmlIcon,
       css: cssIcon,
@@ -56,15 +60,18 @@ const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, ur
       </ImageContainer>
       <ContentWrapper>
         <Headline>{title}</Headline>
-        <SubHeadline>
-          {renderImage(iconTech)}
-        </SubHeadline>
+        <SubHeadlineContainer>
+          <SubHeadline>Stack Usado</SubHeadline>
+          <IconsContainer>
+            {renderImage(iconTech)}
+          </IconsContainer>
+        </SubHeadlineContainer>
         <ProjectDescription>{descrip}</ProjectDescription>
+        <ContainerButtons>
+          <ButtonProject href={urlProject} target='_blank'>Ver Proyecto</ButtonProject>
+          <ButtonSourceCode href={urlCode} target='_blank'>Código Fuente</ButtonSourceCode>
+        </ContainerButtons>
       </ContentWrapper>
-      <ContainerButtons>
-        <ButtonProject href={urlProject} target='_blank'>Ver Proyecto</ButtonProject>
-        <ButtonSourceCode href={urlCode} target='_blank'>Código Fuente</ButtonSourceCode>
-      </ContainerButtons>
     </CardContainer>
   )
 }
