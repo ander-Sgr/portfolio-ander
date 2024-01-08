@@ -20,6 +20,7 @@ import postAppImg from './images/post-app.png'
 import htmlIcon from './svgs/html.svg'
 import cssIcon from './svgs/css.svg'
 import playwrightIcon from './svgs/playwright.svg'
+import laravelIcon from './svgs/laravel.svg'
 
 const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, urlCode }) => {
   const renderImage = (nameImage) => {
@@ -29,7 +30,8 @@ const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, ur
       js: jsIcon,
       html: htmlIcon,
       css: cssIcon,
-      playwright: playwrightIcon
+      playwright: playwrightIcon,
+      laravel: laravelIcon
 
     }
     if (Array.isArray(nameImage)) {

@@ -15,7 +15,6 @@ export const CardContainer = styled.section`
   width: 395px;
   padding: 0px 0px 20px 0px;
   margin: 20px 20px 20px 20px;
-  display: flex;
   @media (min-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -31,10 +30,11 @@ export const ContentWrapper = styled.div`
 export const ImageContainer = styled.div`
   background-color: #1B1B1B;
   display: flex;
+  border-radius: 8px;
   justify-content: center;
   padding: 14px 0px 14px 0px;
-height: 200px;
- 
+  height: 200px;
+
 `
 
 export const Image = styled.img`
@@ -58,7 +58,7 @@ export const SubHeadline = styled.h2`
 export const IconsContainer = styled.div``
 
 export const ProjectDescription = styled.p`
-
+  margin: 25px 0px 0px 0px;
 `
 
 export const ImageTech = styled.img`
@@ -70,7 +70,8 @@ export const ContainerButtons = styled.div`
   display: grid;
   gap: 50px;
   grid-template-columns: repeat(2, 147px);
-  margin-top: 90px;
+  margin-top: 150px;
+  justify-content: center;
 
 `
 
