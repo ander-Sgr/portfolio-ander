@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 const colors = {
-  red: '#FF2626',
+  red: '#F84550',
   darkGray: '#151515',
   lightGray: '#030307',
   white: '#FFFFFF',
