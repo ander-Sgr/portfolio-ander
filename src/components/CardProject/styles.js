@@ -55,17 +55,10 @@ export const SubHeadline = styled.h2`
 
 `
 
-export const IconsContainer = styled.div``
-
 export const ProjectDescription = styled.p`
   margin: 25px 0px 0px 0px;
 `
 
-export const ImageTech = styled.img`
-  width: 28px;  
-  padding-right: 15px;
- 
-`
 export const ContainerButtons = styled.div`
   display: grid;
   gap: 50px;

@@ -5,56 +5,31 @@ import {
   Headline,
   SubHeadlineContainer,
   SubHeadline,
-  IconsContainer,
   ProjectDescription,
   ImageContainer,
   Image,
   ButtonProject,
   ButtonSourceCode,
-  ImageTech,
   ContainerButtons
 } from './styles'
-import jsIcon from './svgs/js.svg'
+
+import IconsStack from '../IconsStack'
+
 import minesweeperImg from './images/minesweeper.png'
 import postAppImg from './images/post-app.png'
-import htmlIcon from './svgs/html.svg'
-import cssIcon from './svgs/css.svg'
-import playwrightIcon from './svgs/playwright.svg'
-import laravelIcon from './svgs/laravel.svg'
 
 const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, urlCode }) => {
-  const renderImage = (nameImage) => {
+  const renderImage = () => {
     const images = {
       minesweeper: minesweeperImg,
-      postApp: postAppImg,
-      js: jsIcon,
-      html: htmlIcon,
-      css: cssIcon,
-      playwright: playwrightIcon,
-      laravel: laravelIcon
-
+      postApp: postAppImg
     }
-    if (Array.isArray(nameImage)) {
-      const icons = nameImage.map((tech, index) => {
-        let icon = null
-
-        if (images[tech]) {
-          icon = images[tech]
-        }
-        return { icon, index }
-      })
-      return icons.map(({ key, icon, index }) => (
-        icon == null ? <React.Fragment key={index} /> : <ImageTech key={index} src={icon} alt={`Tech Icon ${index}`} />
-      ))
-    } else {
-      let imgCard = null
-      if (images[imgProject]) {
-        imgCard = images[imgProject]
-      }
-      return imgCard
+    let imgCard = null
+    if (images[imgProject]) {
+      imgCard = images[imgProject]
     }
+    return imgCard
   }
-
   return (
     <CardContainer>
       <ImageContainer>
@@ -64,9 +39,7 @@ const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, ur
         <Headline>{title}</Headline>
         <SubHeadlineContainer>
           <SubHeadline>Stack Usado</SubHeadline>
-          <IconsContainer>
-            {renderImage(iconTech)}
-          </IconsContainer>
+          <IconsStack iconTech={iconTech} />
         </SubHeadlineContainer>
         <ProjectDescription>{descrip}</ProjectDescription>
         <ContainerButtons>
