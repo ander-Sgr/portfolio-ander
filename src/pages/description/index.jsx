@@ -3,11 +3,18 @@ import {
   ContainerDescription,
   Title,
   ContainerAboutMe,
-  Skills
+  Skills,
+  GridSkills,
+  Item,
+  HeaderSkill,
+  Content
 
 } from './styles'
+import IconsStack from '../../components/IconsStack'
 
 const Description = () => {
+  const langaugeTechs = ['html', 'css', 'js']
+
   return (
     <ContainerDescription>
       <ContainerAboutMe>
@@ -19,12 +26,24 @@ const Description = () => {
         </p>
         <p>Estoy abierto a nuevas oportunidades que me permitan seguir expandiendo mis habilidades y conocimientos.</p>
       </ContainerAboutMe>
-      <Skills>Habilidades</Skills>
-      <ul>
-        <li><strong>Lenguajes y tecnologías:</strong> HTML5, CSS3, React.js, JavaScript</li>
-        <li><strong>DevOps y Cloud:</strong> Terraform, Vagrant, AWS</li>
-        <li><strong>Scripting:</strong> Python</li>
-      </ul>
+      <GridSkills>
+        <Item fullWidth>
+          <Skills>Habilidades</Skills>
+        </Item>
+        <Item>
+          <HeaderSkill>Lenguajes y tecnologías</HeaderSkill>
+          <Content>
+            <IconsStack
+              iconTech={langaugeTechs}
+              sizeIcon='80px'
+            />
+          </Content>
+        </Item>
+        <Item>
+          <HeaderSkill>DevOps y Cloud</HeaderSkill>
+          <Content>Terraform, Vagrant, AWS</Content>
+        </Item>
+      </GridSkills>
     </ContainerDescription>
   )
 }

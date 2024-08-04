@@ -28,7 +28,23 @@ export const Title = styled.h2`
 export const Skills = styled(Title)`
   font-size: 30px;
   text-align: center;
-  margin: 40px auto;
-
-
+`
+export const GridSkills = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  text-align: center;
+`
+export const Item = styled.div`
+ padding: 0.5rem;
+ ${props => props.fullWidth && 'grid-column: span 2;'}
+`
+export const HeaderSkill = styled.h3`
+  margin-bottom: 0.5rem;
+`
+export const Content = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 `
