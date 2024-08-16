@@ -3,86 +3,68 @@ import styled from '@emotion/styled'
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
+  margin: 0 auto;
   justify-content: space-between;
+  justify-content: center;
   font-size: ${(props) => props.theme.fonts.size};
   font-family: ${(props) => props.theme.fonts.body};
-  background-color: ${(props) => props.theme.backgroundNavBar};
-  height: 5.255rem;
 `
 
 export const ListNav = styled.ul`
   list-style-type: none;
-  flex-direction: column;
   background: ${(props) => props.theme.background};
-  padding: 1rem;
-  display: ${(props) => (props.isMenuOpen ? 'flex' : 'none')};
-
-  @media (min-width: 910px) {
-    padding: 0;
-    display: flex; 
-  }
-
 `
 
-export const NavLi = styled.li`
-  margin: 0 1.4rem;
-  
+export const NavLi = styled.li`  
   color: ${(props) => props.theme.foreground};
+  padding-right: 50px;
+  @media (max-width: 510px) {
+    padding-right: 24px;
+  }
 `
 
 export const NavLink = styled.a`
   color: ${(props) => props.theme.foreground};
   list-style-type: none;
   text-decoration: none;
-
-  @media (max-width: 910px) {
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    text-align: center;
-    margin: 0.5rem 0;
+  @media (max-width: 510px) {
+    font-size: 14px;
   }
+
 `
 /* import font Lexend */
 export const LogoContainer = styled.div`
   font-family: ${(props) => props.theme.fonts.lexendFont};
+  padding-right: 50px;
+  @media (max-width: 510px) {
+    padding-right: 30px;
+    padding-left: 0px;
+  }
 `
 
 export const Logo = styled.a`
   color: ${(props) => props.theme.foreground};
   text-decoration: none;
-  margin-left: 8rem;
-  font-size: 32px;
-  @media (max-width: 910px) {
-    margin-left: 1.25rem;
-
-  }
+  font-size: 20px;
 `
 
 export const StyledCharacter = styled.span`
-  color: #FF2626;
+  color: #D64550;
 `
-export const LogoText = styled.span``
+export const LogoText = styled.span`
+  color: #D64550;
+`
 
-export const StyledClosingBracket = styled.span`
-  color: #FF2626;
+export const StyledClosingBracket = styled(StyledCharacter)`
+  color: #D64550;
 `
 
 export const Options = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 8rem;
   font-family: ${(props) => props.theme.fonts.manropeFont};
   
   @media (max-width: 910px) {
-    flex-direction: column;
-    position: fixed;
-    margin-right: 0rem;
-    background: ${(props) => props.theme.background};
-    top: 60px;
-    right: 0;
-    bottom: 0;
-    width: 55%;
-    z-index: 1;
+
   }
 `
