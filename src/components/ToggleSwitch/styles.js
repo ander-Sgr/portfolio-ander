@@ -1,6 +1,9 @@
 import styled from '@emotion/styled/macro'
 
 export const ContainerSwitch = styled.div`
+
+  align-items: center;
+  left: 43px;
 `
 
 export const Label = styled.label`
@@ -14,6 +17,11 @@ export const Label = styled.label`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 45px;
+    height: 14px;
+  }
 `
 
 export const BallSwitch = styled.span`
@@ -25,6 +33,11 @@ export const BallSwitch = styled.span`
     left: 4px;
     border-radius: 50%;
     transition: transform 0.2s linear;
+
+    @media (max-width: 768px) {
+      width: 18px;
+      height: 20px;
+    }
   }
 `
 
