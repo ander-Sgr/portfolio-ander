@@ -2,7 +2,7 @@ export const theme = {
   fonts: {
     body: 'var(--ff-primary-body)',
     heading: 'var(--ff-primary-headline)',
-    size: '18px',
+    size: '16px',
     logoFont: 'var(--ff-logo-font)',
     lexendFont: 'var(--ff-lexend-bold-500-font)',
     manropeFont: 'var(--ff-manrope-medium)'
@@ -19,7 +19,6 @@ export const theme = {
     laptopL: '1440px',
     desktop: '2560px'
   },
-
   light: {
     colors: {
       foreground: '#000000',
@@ -30,8 +29,8 @@ export const theme = {
   dark: {
     colors: {
       foreground: '#FFFFFF',
-      backgroundNavBar: '#151515',
-      backgroundBody: '#030307'
+      backgroundNavBar: '#070B11',
+      backgroundBody: 'var(--clr-gradient)'
     }
   }
 }

@@ -8,11 +8,28 @@ export const GlobalStyles = () => {
   return (
     <Global
       styles={css`
-            body {
-                background-color: ${currentTheme.backgroundBody};
-                color: ${currentTheme.foregound};
-            }
-        `}
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        }
+
+        body {
+          min-height: 100vh; /* Asegura que el body cubra al menos la altura de la ventana */
+          background: ${currentTheme.backgroundBody};
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
+          color: ${currentTheme.foreground};
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+            sans-serif;
+          display: flex;
+          flex-direction: column;
+        }
+      `}
     />
   )
 }
