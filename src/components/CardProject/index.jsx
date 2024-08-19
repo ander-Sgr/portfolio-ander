@@ -37,10 +37,9 @@ const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, ur
       </ImageContainer>
       <ContentWrapper>
         <Headline>{title}</Headline>
-        <SubHeadlineContainer>
-          <SubHeadline>Stack Usado</SubHeadline>
-          <IconsStack iconTech={iconTech} />
-        </SubHeadlineContainer>
+
+        <SubHeadline>Stack Usado</SubHeadline>
+        <IconsStack iconTech={iconTech} />
         <ProjectDescription>{descrip}</ProjectDescription>
         <ContainerButtons>
           <ButtonProject href={urlProject} target='_blank'>Ver Proyecto</ButtonProject>

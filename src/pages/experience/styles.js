@@ -14,7 +14,7 @@ export const ExperienceContainer = styled.section`
    }
 `
 export const Ttile = styled.h2`
-position: relative;
+    position: relative;
     display: flex;
     align-items: center;
     font-size: 1.7rem;

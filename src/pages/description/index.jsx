@@ -2,12 +2,7 @@ import React from 'react'
 import {
   ContainerDescription,
   Title,
-  ContainerAboutMe,
-  Skills,
-  GridSkills,
-  Item,
-  HeaderSkill,
-  Content
+  ContainerAboutMe
 
 } from './styles'
 import IconsStack from '../../components/IconsStack'
@@ -26,24 +21,6 @@ const Description = () => {
         </p>
         <p>Estoy abierto a nuevas oportunidades que me permitan seguir expandiendo mis habilidades y conocimientos.</p>
       </ContainerAboutMe>
-      <GridSkills>
-        <Item fullWidth>
-          <Skills>Habilidades</Skills>
-        </Item>
-        <Item>
-          <HeaderSkill>Lenguajes y tecnologías</HeaderSkill>
-          <Content>
-            <IconsStack
-              iconTech={langaugeTechs}
-              sizeIcon='80px'
-            />
-          </Content>
-        </Item>
-        <Item>
-          <HeaderSkill>DevOps y Cloud</HeaderSkill>
-          <Content>Terraform, Vagrant, AWS</Content>
-        </Item>
-      </GridSkills>
     </ContainerDescription>
   )
 }

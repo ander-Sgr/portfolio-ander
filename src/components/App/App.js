@@ -16,6 +16,7 @@ const App = () => {
       <NavBar options={optionsMenu} />
       <AboutMe />
       <Experience />
+      <Projects />
     </ThemeProvider>
   )
 }

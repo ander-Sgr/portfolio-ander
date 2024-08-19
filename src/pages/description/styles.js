@@ -1,20 +1,18 @@
 import styled from '@emotion/styled'
 
 const colors = {
-  red: '#F84550',
-  darkGray: '#1B1B1B'
+  red: '#FFA500',
+  darkGray: '#333333'
 }
 
 export const ContainerDescription = styled.section`
     margin: 0 auto;
     color: ${(props) => props.theme.foreground};
-  //  border: 2px solid red;
 `
 export const ContainerAboutMe = styled.div`
     margin: 40px auto;
     padding: 20px;
-    width: 80%;
-    background-color: ${colors.darkGray};
+    width: 60%;
     color: ${(props) => props.theme.foreground};
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);

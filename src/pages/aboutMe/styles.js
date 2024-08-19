@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 export const ContainerIntro = styled.div`
    margin: 0 auto;
-   padding-top: 68px;
+   padding-top: 18px;
    width: 70%;
    @media (max-width: 920px) {
     width: 70%;

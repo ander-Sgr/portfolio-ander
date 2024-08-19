@@ -11,7 +11,6 @@ export const WorkExperience = styled.div`
 `
 
 export const ContainerInfoJob = styled.div`
- 
 `
 
 export const ContainerDescriptionJob = styled.div`

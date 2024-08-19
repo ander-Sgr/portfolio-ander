@@ -1,6 +1,7 @@
 import React from 'react'
 import CardProject from '../../components/CardProject'
 import { Container, HeadLine } from './styles'
+import IconProyect from './svg/IconProyect.svg'
 
 const Projects = () => {
   const stackMinesweeper = ['js', 'html', 'css', 'playwright']
@@ -9,20 +10,10 @@ const Projects = () => {
   return (
 
     <Container>
-      <HeadLine>PROYECTOS</HeadLine>
-      <CardProject
-        imgProject='minesweeper'
-        title='MINESWEEPER'
-        iconTech={stackMinesweeper}
-        descrip='Este es un proyecto hecho durante mi Internship. Fue realizado para poner a prueba
-        mis habilidades en JS, HTML/CSS y en realizar test end-to-end con el uso
-        de la biblioteca playwright para automatizar los tests'
-        urlCode='https://github.com/ander-Sgr/minesweeper'
-        urlProject='https://ander-sgr.github.io/minesweeper/src/'
-      />
+      <HeadLine><img src={IconProyect} alt='icon proyect' /> Proyectos</HeadLine>
       <CardProject
         imgProject='postApp'
-        title='POST-APP'
+        title='Post App'
         iconTech={stackPostApp}
         descrip='Esta aplicación fue realizada con fines prácticos, se hizo uso del base de datos realacional
         así como la creación de factorias, migraciciones y poblacion de la base de datos con datos mock. Todo esto hecho con
@@ -30,7 +21,6 @@ const Projects = () => {
         urlCode='https://github.com/ander-Sgr/posts-app'
         urlProject='https://posts-app-production-f496.up.railway.app/'
       />
-
     </Container>
   )
 }

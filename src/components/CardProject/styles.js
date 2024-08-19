@@ -10,7 +10,13 @@ const colors = {
 
 export const CardContainer = styled.section`
     margin: 0 auto;
-    width: 70%;
+    display: grid;
+    grid-template-columns: 30% 53%;
+    gap: 30px; 
+    @media (max-width: 920px) {
+      grid-template-columns: 100%;
+    }
+    margin-bottom: 30px;
 `
 
 export const ContentWrapper = styled.div`
@@ -18,60 +24,61 @@ export const ContentWrapper = styled.div`
 `
 
 export const ImageContainer = styled.div`
-  background-color: #1B1B1B;
-  display: grid;
-  grid-template-columns: auto;
-
 `
 
 export const Image = styled.img`
-  max-width: 70%;
+  width: 100%;
+  height: 300px;
   border-radius: 8px;
 `
 
 export const Headline = styled.h1`
   color: ${colors.red};
   font-size: 30px;
+  margin: 0;
+  padding: 0;
 `
 
-export const SubHeadlineContainer = styled.div`
-  color: ${colors.white};
-  padding-bottom: 15px;
-`
 export const SubHeadline = styled.h2`
+  margin: 0;
+  padding: 0;
 
 `
 
 export const ProjectDescription = styled.p`
-  margin: 25px 0px 0px 0px;
+  margin: 0;
+  padding: 0;
 `
 
 export const ContainerButtons = styled.div`
   display: grid;
-  gap: 50px;
-  grid-template-columns: repeat(2, 147px);
-  margin-top: 150px;
-  justify-content: center;
-
+  padding-bottom: 15px;
+  grid-template-columns: repeat(auto-fill, 130px);
+  gap: 18px;
+  align-items: center;
+  position: relative;
+  padding-top: 40px;
+  text-align: center;
 `
 
 const ButtonStyle = styled.a`
-  text-align: center;
-  color: ${colors.white};
-  text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 8px;
+  background-color: #162435;
   cursor: pointer;
+  text-decoration: none;
+  color: #FFFF;
   &:hover {
     opacity: 0.8;
   }
 `
 
 export const ButtonProject = styled(ButtonStyle)`
-  background-color: ${colors.red};
-
 `
 
 export const ButtonSourceCode = styled(ButtonStyle)`
-  background-color: #323232;
 `
