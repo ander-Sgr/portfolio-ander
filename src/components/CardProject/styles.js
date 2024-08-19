@@ -9,31 +9,18 @@ const colors = {
 }
 
 export const CardContainer = styled.section`
-  background-color: ${colors.darkGray};
-  color: ${colors.white};
-  border-radius: 8px;
-  width: 395px;
-  padding: 0px 0px 20px 0px;
-  margin: 20px 20px 20px 20px;
-  @media (min-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
+    margin: 0 auto;
+    width: 70%;
 `
 
 export const ContentWrapper = styled.div`
-  display: grid;
-  grid-template-rows: repeat(3, 92px);
-  margin: 0px 15px 0px 15px;
+  
 `
 
 export const ImageContainer = styled.div`
   background-color: #1B1B1B;
-  display: flex;
-  border-radius: 8px;
-  justify-content: center;
-  padding: 14px 0px 14px 0px;
-  height: 200px;
+  display: grid;
+  grid-template-columns: auto;
 
 `
 
