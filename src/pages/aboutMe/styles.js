@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const ContainerIntro = styled.div`
+export const ContainerIntro = styled.section`
    margin: 0 auto;
    padding-top: 18px;
    width: 70%;

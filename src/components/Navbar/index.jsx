@@ -24,10 +24,26 @@ const NavBar = () => {
       <ListNav>
         <Options>
           <NavLi>
-            <NavLink>Experiencia</NavLink>
+            <NavLink
+              to='experience'
+              spy
+              smooth
+              offset={-75}
+              duration={500}
+            >
+              Experiencia
+            </NavLink>
           </NavLi>
           <NavLi>
-            <NavLink>Proyectos</NavLink>
+            <NavLink
+              to='proyects'
+              spy
+              smooth
+              offset={-75}
+              duration={500}
+            >
+              Proyectos
+            </NavLink>
           </NavLi>
           <NavLi>
             <NavLink href='./cv-anderson-estrella-dev.pdf' target='_blank'>CV</NavLink>

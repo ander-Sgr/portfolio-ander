@@ -8,7 +8,7 @@ export const StyledIconProyect = styled(IconProyectSVG)`
   height: 24px;
 `
 
-export const Container = styled.div`
+export const Container = styled.section`
     margin: 0 auto;
     width: 70%;
     @media (max-width: 920px) {

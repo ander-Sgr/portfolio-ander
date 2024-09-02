@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Link as ScrollLink } from 'react-scroll'
 
 export const Nav = styled.nav` 
   display: flex;
@@ -37,6 +38,7 @@ export const Nav = styled.nav`
   @media (max-width: 375px) {
     width: 90%;
   }
+
 `
 
 export const ListNav = styled.ul`
@@ -52,7 +54,7 @@ export const NavLi = styled.li`
   }
 `
 
-export const NavLink = styled.a`
+export const NavLink = styled(ScrollLink)`
   color: ${(props) => props.theme.foreground};
   list-style-type: none;
   text-decoration: none;
@@ -63,7 +65,9 @@ export const NavLink = styled.a`
   @media (max-width: 510px) {
     font-size: 14px;
   }
-
+  &.active {
+    color: ${(props) => props.theme.hoverNav};
+  }
 `
 
 export const LogoContainer = styled.div`

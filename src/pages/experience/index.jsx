@@ -4,7 +4,7 @@ import TimeLineWork from '../../components/TimeLine'
 
 const Experience = () => {
   return (
-    <ExperienceContainer>
+    <ExperienceContainer id='experience'>
       <Ttile>
         <StyledIconJobs />
         Experiencia Laboral
