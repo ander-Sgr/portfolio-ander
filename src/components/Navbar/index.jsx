@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Nav, ListNav, NavLi, NavLink, Options } from './styles'
+import { Nav, ListNav, NavLi, NavLink, Options, NavLinkScrollStyled } from './styles'
 import ToggleSwitch from '../ToggleSwitch'
 
 const NavBar = () => {
@@ -24,7 +24,7 @@ const NavBar = () => {
       <ListNav>
         <Options>
           <NavLi>
-            <NavLink
+            <NavLinkScrollStyled
               to='experience'
               spy
               smooth
@@ -32,10 +32,10 @@ const NavBar = () => {
               duration={500}
             >
               Experiencia
-            </NavLink>
+            </NavLinkScrollStyled>
           </NavLi>
           <NavLi>
-            <NavLink
+            <NavLinkScrollStyled
               to='proyects'
               spy
               smooth
@@ -43,7 +43,7 @@ const NavBar = () => {
               duration={500}
             >
               Proyectos
-            </NavLink>
+            </NavLinkScrollStyled>
           </NavLi>
           <NavLi>
             <NavLink href='./cv-anderson-estrella-dev.pdf' target='_blank'>CV</NavLink>

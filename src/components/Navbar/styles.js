@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Link as ScrollLink } from 'react-scroll'
+import { Link as NavLinkScroll } from 'react-scroll'
 
 export const Nav = styled.nav` 
   display: flex;
@@ -54,20 +54,31 @@ export const NavLi = styled.li`
   }
 `
 
-export const NavLink = styled(ScrollLink)`
+export const NavLink = styled.a`
   color: ${(props) => props.theme.foreground};
   list-style-type: none;
   text-decoration: none;
   cursor: pointer;
-  &:hover, &:focus{
+
+  &:hover, &:focus {
     color: ${(props) => props.theme.hoverNav};
   }
+
   @media (max-width: 510px) {
     font-size: 14px;
   }
+
   &.active {
     color: ${(props) => props.theme.hoverNav};
   }
+`
+
+export const NavLinkScrollStyled = styled(NavLinkScroll)`
+  cursor: pointer;
+  
+  &:hover, &:focus {
+    color: ${(props) => props.theme.hoverNav};
+}
 `
 
 export const LogoContainer = styled.div`
