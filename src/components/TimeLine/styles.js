@@ -14,18 +14,18 @@ export const ContainerInfoJob = styled.div`
 `
 
 export const ContainerDescriptionJob = styled.div`
-     border-left: 2px solid #FFFFFF; 
+     border-left: 2px solid #bbbbbb; 
 `
 
 export const DotTimeLine = styled.div`
     position: relative;
-    left: -10px; /* Centra el dot respecto a la línea */
+    left: -9px;
     top: 0;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     background-color: #D64550;
     border-radius: 50%;
-    border: 2px solid #202020;
+    // border: 2px solid #202020;
 `
 
 export const NameCompany = styled.h3`
@@ -38,5 +38,4 @@ export const NameCompany = styled.h3`
 `
 export const DescriptionJob = styled.p`
     margin-left: 20px;
-    
 `
