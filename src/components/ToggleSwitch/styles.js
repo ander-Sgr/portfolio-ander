@@ -1,7 +1,6 @@
 import styled from '@emotion/styled/macro'
 
 export const ContainerSwitch = styled.div`
-
   align-items: center;
   left: 43px;
 `
@@ -9,7 +8,7 @@ export const ContainerSwitch = styled.div`
 export const Label = styled.label`
   background-color: #ffff;
   width: 50px;
-  height: 22px;
+  height: 15px;
   border-radius: 50px;
   position: relative;
   padding: 5px;
@@ -17,18 +16,13 @@ export const Label = styled.label`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media (max-width: 768px) {
-    width: 45px;
-    height: 14px;
-  }
 `
 
 export const BallSwitch = styled.span`
    ${Label} > & {
     background-color: #28ca59;
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     position: absolute;
     left: 4px;
     border-radius: 50%;
@@ -36,7 +30,7 @@ export const BallSwitch = styled.span`
 
     @media (max-width: 768px) {
       width: 18px;
-      height: 20px;
+      height: 18px;
     }
   }
 `
@@ -52,7 +46,7 @@ export const CheckBox = styled.input`
 `
 
 const IconBase = styled.img`
-  width: 13px;
+  width: 15px;
 `
 
 export const SunIcon = styled(IconBase)``

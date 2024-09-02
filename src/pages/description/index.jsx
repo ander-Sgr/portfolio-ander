@@ -5,11 +5,8 @@ import {
   ContainerAboutMe
 
 } from './styles'
-import IconsStack from '../../components/IconsStack'
 
 const Description = () => {
-  const langaugeTechs = ['html', 'css', 'js']
-
   return (
     <ContainerDescription>
       <ContainerAboutMe>

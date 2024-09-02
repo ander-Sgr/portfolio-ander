@@ -1,12 +1,14 @@
 import React from 'react'
-import { ExperienceContainer, JobSvg, Ttile } from './styles'
+import { ExperienceContainer, Ttile, StyledIconJobs } from './styles'
 import TimeLineWork from '../../components/TimeLine'
-import jobIcon from './svgs/job_white.svg'
 
 const Experience = () => {
   return (
     <ExperienceContainer>
-      <Ttile><JobSvg src={jobIcon} alt='job icon' /> Experiencia Laboral</Ttile>
+      <Ttile>
+        <StyledIconJobs />
+        Experiencia Laboral
+      </Ttile>
       <TimeLineWork
         titleJob='Soporte IT N2'
         nameCompany='i3 e Resources IT'

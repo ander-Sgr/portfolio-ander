@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-
+import { ReactComponent as IconGitSVG } from './svgs/gitIcon.svg'
 const colors = {
   red: '#F84550',
   darkGray: '#151515',
@@ -7,6 +7,11 @@ const colors = {
   white: '#FFFFFF',
   darkred: ''
 }
+
+export const StyledIconGitSSvg = styled(IconGitSVG)`
+  fill: ${(props) => props.theme.foregrounds};
+  
+`
 
 export const CardContainer = styled.section`
     margin: 0 auto;
@@ -20,7 +25,6 @@ export const CardContainer = styled.section`
 `
 
 export const ContentWrapper = styled.div`
-  
 `
 
 export const ImageContainer = styled.div`
@@ -68,10 +72,10 @@ const ButtonStyle = styled.a`
   border-radius: 10px;
   padding: 10px;
   gap: 8px;
-  background-color: #162435;
+  background-color: ${(props) => props.theme.backgroundButton};
   cursor: pointer;
   text-decoration: none;
-  color: #FFFF;
+  color: ${(props) => props.theme.foreground};
   &:hover {
     opacity: 0.8;
   }

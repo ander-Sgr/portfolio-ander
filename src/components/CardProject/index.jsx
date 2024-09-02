@@ -3,22 +3,21 @@ import {
   CardContainer,
   ContentWrapper,
   Headline,
-  SubHeadlineContainer,
   SubHeadline,
   ProjectDescription,
   ImageContainer,
   Image,
   ButtonProject,
   ButtonSourceCode,
-  ContainerButtons
+  ContainerButtons,
+  StyledIconGitSSvg
 } from './styles'
 
 import IconsStack from '../IconsStack'
-
 import minesweeperImg from './images/minesweeper.png'
 import postAppImg from './images/post-app.png'
 
-const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, urlCode }) => {
+const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, urlCode, hasPreview }) => {
   const renderImage = () => {
     const images = {
       minesweeper: minesweeperImg,
@@ -42,8 +41,15 @@ const CardProject = ({ imgProject, title, iconTech = [], descrip, urlProject, ur
         <IconsStack iconTech={iconTech} />
         <ProjectDescription>{descrip}</ProjectDescription>
         <ContainerButtons>
-          <ButtonProject href={urlProject} target='_blank'>Ver Proyecto</ButtonProject>
-          <ButtonSourceCode href={urlCode} target='_blank'>Código Fuente</ButtonSourceCode>
+          {hasPreview
+            ? <ButtonProject href={urlProject} target='_blank'>
+              Ver Proyecto
+            </ButtonProject>
+            : <></>}
+          <ButtonSourceCode href={urlCode} target='_blank'>
+            <StyledIconGitSSvg />
+            Código
+          </ButtonSourceCode>
         </ContainerButtons>
       </ContentWrapper>
     </CardContainer>

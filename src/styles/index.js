@@ -2,7 +2,7 @@ export const theme = {
   fonts: {
     body: 'var(--ff-primary-body)',
     heading: 'var(--ff-primary-headline)',
-    size: '16px',
+    size: '14px',
     logoFont: 'var(--ff-logo-font)',
     lexendFont: 'var(--ff-lexend-bold-500-font)',
     manropeFont: 'var(--ff-manrope-medium)'
@@ -10,27 +10,23 @@ export const theme = {
   fontWeight: {
     bold: 'bold'
   },
-  sizes: {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '425px',
-    tablet: '768px',
-    laptop: '1024px',
-    laptopL: '1440px',
-    desktop: '2560px'
-  },
   light: {
     colors: {
       foreground: '#000000',
-      backgroundNavBar: '#eeeeee',
-      backgroundBody: '#FFFFFF'
+      backgroundBody: 'var(--clr-gradient-ligth)',
+      backgroundButton: 'var(--clr-button-ligth)',
+      hoverNav: '#D64550',
+      backgroundNav: 'var(--clr-background-nav-ligth)'
+
     }
   },
   dark: {
     colors: {
       foreground: '#FFFFFF',
-      backgroundNavBar: '#070B11',
-      backgroundBody: 'var(--clr-gradient)'
+      backgroundBody: 'var(--clr-gradient)',
+      backgroundButton: 'var(--clr-button-dark)',
+      hoverNav: '#D64550',
+      backgroundNav: 'var(--clr-background-nav-dark)'
     }
   }
 }

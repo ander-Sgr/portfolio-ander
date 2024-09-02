@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 
 :root {
-  --clr-background: #fafafa;
-  --clr-foreground: #ffd70c;
   --ff-primary-body: Arial, Helvetica, sans-serif;
   --ff-smartpointCloud-font: atls-default, sans-serif;
   --ff-primary-headline: 'Impact', sans-serif;
@@ -12,6 +10,11 @@
   --ff-lexend-bold-500-font: 'Lexend', sans-serif;
   --ff-manrope-medium: 'Manrope', sans-serif;
   --clr-gradient: linear-gradient( #101a26 20%, rgb(0, 3, 9) 90%);
+  --clr-gradient-ligth: linear-gradient(350deg, rgba(249,249,249,1) 0%, rgb(222, 230, 248) 80%);
+  --clr-button-ligth: rgb(215, 225, 248);
+  --clr-background-nav-ligth: rgb(235, 245, 250);
+  --clr-background-nav-dark: rgb(34, 41, 56);
+  --clr-button-dark: #162435
 }
 
 body {

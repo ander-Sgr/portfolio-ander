@@ -7,12 +7,10 @@ export const ContainerIntro = styled.div`
    @media (max-width: 920px) {
     width: 70%;
     padding-top: 18px;
-
    }
    @media (max-width: 650px) {
     width: 90%;
     padding-top: 18px;
-
    }
 `
 
@@ -38,27 +36,29 @@ export const LineSeparator = styled.div`
     width: 100%;
     padding-top: 1px;
     margin-top: 13px;
-    background-color: #FFFFFF;
+    background-color: #bbbbbb;
 `
 export const ContainerContact = styled.div`
     display: grid;
     padding-bottom: 15px;
-    grid-template-columns: repeat(auto-fill, 100px);
+    grid-template-columns: repeat(auto-fill, 140px);
     gap: 18px;
     align-items: center;
     text-align: center;
 `
 export const Contact = styled.a`
+    letter-spacing: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px;
     gap: 8px;
-    background-color: #162435;
+    background-color: ${(props) => props.theme.backgroundButton};
     cursor: pointer;
     text-decoration: none;
-    color: #FFFF;
+    color: ${(props) => props.theme.foreground};
+    
 
 `
 export const ContactImage = styled.img`
@@ -73,6 +73,6 @@ export const DescriptionContainer = styled.div`
         width: 70%;
     }
    @media (max-width: 650px) {
-        width: 90%;
-   }
+         width: 90%;
+    }
 `

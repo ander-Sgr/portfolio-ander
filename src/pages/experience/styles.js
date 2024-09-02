@@ -1,4 +1,12 @@
 import styled from '@emotion/styled'
+import { ReactComponent as IconJobSVG } from './svgs/iconjob.svg'
+
+export const StyledIconJobs = styled(IconJobSVG)`
+     fill: ${(props) => props.theme.foreground};
+     margin-right: 10px;
+     width: 24px;
+     height: 24px;
+`
 
 export const ExperienceContainer = styled.section`
     margin: 0 auto;
@@ -18,11 +26,5 @@ export const Ttile = styled.h2`
     display: flex;
     align-items: center;
     font-size: 1.7rem;
-    color: #ffffff;  
-`
-export const JobSvg = styled.img`
-     margin-right: 10px;
-     width: 24px;
-     height: 24px;
-
+    color: ${(props) => props.theme.foreground};
 `
